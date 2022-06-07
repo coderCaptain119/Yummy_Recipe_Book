@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .5s linear;
+}
+
+:root {
+    --color : #d65101;
+    --dark-color : #b54507;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #808080;
+}
+
+body {
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Global Class Styles Start */
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+
+.text {
+    opacity: 0.8;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom:  1rem;
+}
+
+/* Global Class Styles End */
+
+/* Home and Search Section Start */
+
+.container {
+    min-height: 100vh;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url('./bg-2.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: blur(1px); */
+    z-index: -1;
+}
+
+.meal-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    /* background: #fff; */
+    text-align: center;
+}
+
+.meal-search {
+    margin: 2rem 0;
+}
+
+.meal-search cite {
+    font-size: 1rem;
+}
+
+.meal-search-box {
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-control,
+.search-btn {
+    width: 100%;
+}
+
+.search-control {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid var(--color);
+    color: var(--color);
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.search-control::placeholder {
+    color: var(--color);
+}
+
+.search-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    background: var(--color);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: all .4s linear;
+}
+
+.search-btn:hover {
+    background: var(--dark-color);
+}
+
+/* Home and Search Section End */
+
+/* Meal Result Section Start */
+
+.meal-result {
+    margin-top: 4rem;
+}
+
+#meal {
+    margin: 2.4rem 0;
+}
+
+.meal-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+}
+
+.meal-img img {
+    width: 100%;
+    display: block;
+}
+
+.meal-name {
+    padding: 1.5rem 0.5rem;
+}
+
+.meal-name h3 {
+    font-size: 1.4rem;
+}
+
+.recipe-btn {
+    text-decoration: none;
+    color: #fff;
+    background: var(--color);
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 175px;
+    margin: 1rem auto;
+    padding: .75rem 0;
+    display: block;
+    transition: all .4s linear;
+}
+
+.recipe-btn:hover {
+    background: var(--dark-color);
+}
+
+/* Meal Result Section End */
+
+/* Recipe Detail Section Start */
+
+.meal-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); */
+    color: #fff;
+    background: var(--color);
+    border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    padding: 2rem 0;
+    display: none;
+}
+
+.meal-details::-webkit-scrollbar {
+    width: 5px;
+}
+
+.meal-details::-webkit-scrollbar-thumb {
+    background: #f0f0f0;
+    border-radius: 1rem;
+}
+
+.showRecipe {
+    display: block;
+}
+
+.meal-details-content {
+    margin: 2rem;
+}
+
+.recipe-instruct p {
+    padding: 1rem 0;
+}
+
+.recipe-close-btn {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: transparent;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.recipe-close-btn:hover {
+    opacity: 1;
+}
+
+.recipe-title {
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+
+.recipe-category {
+    background: #fff;
+    font-weight: 600;
+    color: var(--color);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.recipe-instruct {
+    padding: 1rem 0;
+}
+
+.recipe-meal-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.recipe-link {
+    margin: 1.4rem 0;
+}
+
+.recipe-link a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+}
+
+.recipe-link a:hover {
+    opacity: 0.7;
+}
+
+.notFound {
+    grid-template-columns: 1fr!important;
+    color: var(--color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Recipe Detail Section End */
+
+/* Review Form Start */
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(128, 128, 128, 0.8);
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    position: fixed;
+    top: 0;right: -150%;
+    z-index: 100;
+}
+
+#review-page.active {
+    right: 0;
+}
+
+#close-review-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.screen {
+    background: #3e3e3e;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.9);
+    display: flex;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: 50px;
+}
+
+.screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    display: flex;
+    flex-direction: column;
+    color: var(--color);
+    font-size: 26px;
+}
+
+.app-contact {
+    margin-top: auto;
+    font-size: 9px;
+    color: #888;
+}
+  
+.app-form-group {
+    margin-bottom: 15px;
+}
+
+.app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.message::-webkit-scrollbar {
+    width: 5px;
+}
+
+.message::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.message::-webkit-scrollbar-thumb {
+    background: #808080;
+    border-radius: 1rem;
+}
+  
+.app-form-control {
+    width: 250px;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.app-form-control,
+.app-form-button {
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.app-form-control::placeholder {
+    color: #666;
+}
+  
+.app-form-control:focus {
+    border-bottom-color: #ddd;
+}
+
+.app-form-button {
+    background: none;
+    border: none;
+    color: var(--color);
+    /* color: #ea1d6f; */
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.app-form-button:hover {
+    /* color: #b9134f; */
+    color: var(--dark-color);
+}
+
+#msg-me {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    background: #3e3e3e;
+    box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    display: block;
+}
+
+#msg-me.active {
+    display: none;
+}
+
+/* Review Form End */
+
+.credit {
+    border-top: #000;
+    padding: 0 1rem;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color: #808080;
+    text-align: center;
+}
+
+.credit span {
+    color: var(--color);
+}
+
+/* Media Queries Start */
+
+@media screen and (max-width: 520px) {
+    .screen {
+        flex-direction: column;
+    }
+    
+    .screen-body-item {
+        padding: 15px 50px;
+    }
+  
+    .screen-body-item.left {
+        text-align: center;
+    }
+  
+    .app-title {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .meal-search-box {
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #meal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .meal-item {
+        margin: 0;
+    }
+
+    .meal-details {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #meal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media Queries End */

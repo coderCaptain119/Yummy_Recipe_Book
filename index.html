@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Yummy - Find Meal For Your Ingredients</title>
+
+    <!-- Fav Icon Linl -->
+    <link rel="icon" type="image/x-icon" href="/favicon.jpg">
+
+    <!-- Font-Awasome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Style Sheet Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Find Meal For Your Ingredients</h2>
+                <blockquote>
+                    Real food doesn't have ingredients, real food is ingredients.<br>
+                    <cite>- Janie Oliver</cite>
+                </blockquote>
+                <div class="meal-search-box">
+                    <input type="search" class="search-control" placeholder="Enter an ingredient" id="search-input">
+                    <button type="submit" class="search-btn btn" id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="meal-result">
+                <h2 class="title">Your Search Results :</h2>
+            </div>
+
+            <!-- Meal Items Start -->
+
+            <div id="meal">
+                <!-- <div class="meal-item">
+                    <div class="meal-img">
+                        <img src="food.jpg" alt="food-item">
+                    </div>
+                    <div class="meal-name">
+                        <h3>Cheese Garlic Bread</h3>
+                        <a href="#" class="recipe-btn">Get Recipe</a>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Meal Items End -->
+
+            <!-- Meal Details Start -->
+
+            <div class="meal-details">
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="meal-details-content">
+                    <!-- <h2 class="recipe-title">Cheese Garlic Bread</h2>
+                    <p class="recipe-category">Snacks</p>
+                    <div class="recipe-instruct">
+                        <h3>Instructions : </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quibusdam aliquid, sunt nostrum suscipit provident minus quisquam debitis delectus quae tempora molestiae dolor minima, consectetur repellendus! Deserunt facilis perspiciatis exercitationem!</p>
+                    </div>
+                    <div class="recipe-meal-image">
+                        <img src="food.jpg" alt="food">
+                    </div> -->
+                    <div class="recipe-link">
+                        <a href="#" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meal Details End -->
+
+        </div>
+    </section>
+
+    <!-- Review Section -->
+
+    <section class="background" id="review-page">
+        <div id="close-review-btn" class="fas fa-times"></div>
+        <div class="screen">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>Please Share</span>
+                        <span>Your Experience</span>
+                        <span>With Us</span>
+                    </div>
+                    <div class="app-contact">CONTACT INFO : +91 123 456 9999</div>
+                </div>
+                <div class="screen-body-item right">
+                    <div class="app-form">
+                        <div class="app-form-group">
+                            <input class="app-form-control" placeholder="NAME">
+                        </div>
+                        <div class="app-form-group">
+                            <input class="app-form-control" placeholder="EMAIL">
+                        </div>
+                        <div class="app-form-group">
+                            <input class="app-form-control" placeholder="CONTACT NO">
+                        </div>
+                        <div class="app-form-group">
+                            <textarea class="app-form-control message" placeholder="MESSAGE" rows="4" cols="27"></textarea>
+                        </div>
+                        <div class="app-form-group buttons">
+                            <button class="app-form-button">CANCEL</button>
+                            <button class="app-form-button">SEND</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <hr>
+    <div id="msg-me" class="fas fa-comment-dots"></div>
+    
+    <div class="credit">created by <span>mr. dinesh vaghela</span> || © copyright all rights reserved!</div>
+
+    <!-- Review Section -->
+
+    <script src="app.js"></script>
+</body>
+</html>
